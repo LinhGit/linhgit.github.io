@@ -32,6 +32,23 @@
     flex-wrap: wrap;
     justify-content: space-between;
 }
+#download-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000; /* Đảm bảo nút không bị che */
+}
+
+#download-button:hover {
+    background-color: #0056b3;
+}
 
 /* Điều chỉnh kích thước chữ và khoảng cách trên điện thoại */
 @media (max-width: 768px) {
@@ -1012,6 +1029,7 @@ pdf2htmlEX.defaultViewer = new pdf2htmlEX.Viewer({});
 <title></title>
 </head>
 <body>
+  <a href="./My_Resume.pdf" download="document.pdf" id="download-button">Download</a>
 <div id="sidebar">
 <div id="outline">
 </div>
